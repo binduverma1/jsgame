@@ -1,0 +1,286 @@
+
+http://tutorialzine.com/2014/08/what-does-this-function-do/
+Q: function whatDoesItDo(val){
+	return val ? 1: 2;
+	}
+Ans: it returns 1 if val is truthful otherwise2.	
+
+Q:
+function whatDoesItDo(param){
+	return {blue:"#0000ff", green:"#00ff00", red:"#ff0000"} [param];
+}
+Ans: it converts red, green and blue colors to their hex values.
+
+Q: function whatDoesItDo(color){
+		if (color !=='blue' || color !== 'green') {
+			color = 'red';
+		}
+			return color;
+	}		
+ANS: only returns color red.
+
+Q: 	function whatDoesItDo(arr) {
+		return arr.filter(function (elem, pos) {
+			return arr.indec(ele) == pos;
+		});
+	});
+ANS: Removes duplicate values from an array
+
+Q : function whatDoesItDo(arr) {
+		return arr.reduce(function(s, n){'return s + n;} 0);
+	}
+Ans:Sums all the elements in the array
+
+Q: function whatDoesItDo(arr){
+		return arr.map(function(x){return x*2;});
+	}
+ANS: Return a new array with nubers twice as large as the original
+
+Q:- function whatDoesItDo(mood){
+	return mood && "I like this" || "I don't like this";
+	}
+ANS:- if mood is true, will return "I like this", otherwise "I don't like this"
+
+Q: function whatDoesItDo(str) {
+		return str.split(' ').reverse().join(' ')
+		}
+ANS:if a stirng is passed, returns a revefsed copy.
+
+Q: function whatDoesItDo() {
+		return document.querySelectorAll('*').length;
+}
+ANS: returns the number of elements on the page
+
+Q:function whatDoesItDo(arr) {
+	return Math.max.apply(null,arr);
+	}
+ANS: finds the largest number in the array
+
+Q:function whatDoesItDo(arr){
+	return arr.slice(0).sort();
+}
+ANS:- returns a sorted copy of the array
+
+Q: function whatDoesItDo(num){
+	return Math.max(0, Math.min(10,num));
+}
+ANS: Fits the number passed as a parameter in an interval from 0 to 10
+
+Q: function whatDoesItDo() {
+var values = [];
+myBlock: {
+		values.push('1');
+		values.push('2');
+		break myBlock;
+		values.push('3');
+	}
+values.push('4);
+return values.join(',');
+}
+Ans: It will return the string '1,2,4'
+Q: function whatDoesItDo() {
+			return Array(4).join("lol" - 2) + "Batman!";
+	}
+ANS:	"NanNanNan Batman!"
+
+Q: function whatDoesItDo(str) {
+	return str.bold().italics();
+	}
+ANS: Retrun HTML of the string wrapped in bold and italics tags.
+
+Q: function whatDoesItDo(str) {
+		return /^\d{3,}$/.test(str);
+	}
+ANS: Makes sure that the string contains only three or more digits	
+Q: function whatDoesItDo(num) {
+	return this + num;
+	}
+	whatDoesItDo = whatDoesItDo.bind(10);
+ANS: It will always return 10 more than the number passed as an argument
+
+Q: function whatDoesItDo(){
+		return (![]+[]]+(![]+[])
+
+Javascript Fundamental Quiz Result
+Scrolldown to review your answer and view your score.
+ Passing grade is 70% = C.  
+
+ 
+
+1) You are a junior web designer. Your company assigns you to work on a JavaScript project. Which of the following are the advantages of using JavaScript for form validation?   
+       a) Conservation of client CPU resources   
+       b)  (your answer) Increased validity of form submission   
+       c) Conservation of bandwidth   
+       d) Increase end-user satisfaction   
+       e) Either BCD - correct answer  
+
+
+ 
+2) Your company assigns you to work on a JavaScript project. With the DATE object, which of the following allows you to call a function based on an elapsed time?   
+       a) setElapsedTime()   
+       b) Timeout()   
+       c)  (your answer) setTimeout()   
+       d) setTime() - correct answer   
+
+
+ 
+3) You are working on a JavaScript project. What is used to restart the inner most loop?   
+       a) Abort   
+       b)  (your answer) Breakloop   
+       c) Stop   
+       d) Continue label - correct answer   
+
+
+ 
+4) You work on a JavaScript project. Which of the following correctly describe the relationships of JavaScript and "objects"?   
+       a) JavaScript is Object-oriented   
+       b) JavaScript is Object-based  - correct answer   
+       c)  (your answer) JavaScript is Object-driven   
+       d) JavaScript has no relationship with objects   
+
+
+ 
+5) You work on a JavaScript project. How do you prompt users with messages and at the same time requesting user inputs?   
+       a) Alert()   
+       b) Display()   
+       c)  (your answer) Prompt() - correct answer   
+       d) Confirm()    
+
+
+ 
+6) Which of the following is the correct syntax of FOR?   
+       a) for ( increment; initialize; test)   
+       b) for ( initialize; test), increment    
+       c)  (your answer) for ( initialize; test; increment) - correct answer   
+       d) for ( test; initalize; increment)   
+
+
+ 
+7) In your JavaScript code, how do you find out which character occurs at the 5th position in a string "How are you"?   
+       a) Substring()   
+       b)  (your answer) String()   
+       c) Stringlength()   
+       d) CharAt() - correct answer   
+
+
+ 
+8) Which of the following do you use for a multi-way branch?  
+       a) If    
+       b) Ifthen   
+       c)  (your answer) Ifelse   
+       d) switch - correct answer   
+       e) for  
+
+
+ 
+9) You want to design a form validation mechanism. Using string methods, which of the following are the steps involved ?  
+       a) Check for the presence of certain characters   
+       b) Check the position of substrings   
+       c) Test the length of data   
+       d) Check the variable type of the strings   
+       e)  (your answer) Either ABC - correct answer  
+
+
+ 
+10) Which of the following is the minimum browser version that supports JavaScript   
+       a) Navigator v2.0 - correct answer   
+       b) Mozilla V1.5   
+       c)  (your answer) IE 2.0   
+       d) Navigator V1.0   
+
+
+ 
+11)  Under which of the following conditions will you need to include semi colons on a line of code?   
+       a) When you have multiple statements on multiple lines   
+       b)  (your answer) When you have multiple statements on a line - correct answer   
+       c) When you have single statement on multiple lines    
+       d) When you have single statement on a line   
+
+
+ 
+12) Which of the following are the valid JavaScript versions?  
+       a) Version 1.2   
+       b) Version 1.1   
+       c) Version 1.3   
+       d) Version 1.4   
+       e)  (your answer) All of the above - correct answer  
+
+
+ 
+13) Which of the following languages will you consider as being similar to JavaScript?  
+       a) C   
+       b) C++   
+       c) Pascal   
+       d)  (your answer) PHP   
+       e) Either A & C - correct answer  
+
+
+ 
+14) You plan the coding of your project. When must the object references be ready?   
+       a) at run time - correct answer   
+       b) at compile time   
+       c) at debug time    
+       d)  (your answer) at code time   
+
+
+ 
+15) Which of the following correctly describe cookies ?  
+       a) Often referred to as "persistent cookies"   
+       b) Often referred to as "persistent HTML"    
+       c) Small memory-resident pieces of information sent from a server to the client   
+       d)  (your answer) Small memory-resident pieces of information sent from a client to the server   
+       e) Either AB&C - correct answer  
+
+
+ 
+16) A program written by JavaScript is driven by  
+       a)  (your answer) Events - correct answer   
+       b) Classes   
+       c) Objects   
+       d) DLL   
+       e) Components  
+
+
+ 
+17) What are JavaScript relations with the underlying operating platform?   
+       a)  (your answer) Platform dependent   
+       b) Platform linkage    
+       c) Platform independent - correct answer   
+       d) Platform binding   
+
+
+ 
+18) When you plan for the JavaScript variable names, the first character must be?  
+       a) Underscore   
+       b) Comma   
+       c) Hyphen   
+       d) Letter   
+       e)  (your answer) Either A&D - correct answer  
+
+
+ 
+19) Which of the following correctly describe JavaScript as a language?   
+       a)  (your answer) It is based on object creation   
+       b) It focuses on component building   
+       c) It focuses on logic flow    
+       d) It emphasis on SCRIPTING - correct answer   
+
+
+ 
+20) When authoring web page with Javascript, why should you explicitly include the window object into your codes?   
+       a) this is a good practice - correct answer   
+       b) this is REQUIRED   
+       c)  (your answer) this ensures browser compatibility   
+       d) this ensures OS compatibility    
+
+
+ 21 Javascript can be used for storing the form's contents to a database file on the server
+Ans:  false
+ 22. what java wrapper type is created when a javascipt object is sent to java?
+ ANS: JSObject
+ 23. whis attribute needs to be changed to make elements invisible?
+ ANS: visibilty
+ 24. javascript supports all boolean operators
+ ANS: false
+
+  

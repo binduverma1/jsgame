@@ -1,0 +1,148 @@
+<!-- 
+		Name: <Put name here>
+		Date: <Put date here>
+		Class: CIT147, Javascript Fundamentals
+		Project 7 my version
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pop-A-Ballon</title>
+    <!-- CSS styles: This is for me to worry about; not you. -->
+	<link href="css/game.css" rel="stylesheet" />
+	<script src="js/jquery-1.11.2.js"></script>
+	<script>
+		var score = 0;
+		var time_left = 30;
+		var clock;
+		var t;
+		var count = 0;
+		
+		
+		var xPos;
+		var yPos;
+		var	int_a;	
+		
+		$(document).ready(function(){
+			$("#start_button").click(function() {
+				start();
+			});
+			
+			$("#gamespace").delegate("img","click", function() {			
+			incScore();
+			$(this).hide();
+			});
+			
+		});	
+			function start() {
+				
+				startTimer();							
+				addMole();	
+				del();	
+				stopGame();
+				$("#start_button").hide();
+					
+				/* incScore(); */
+			}
+			
+			function ranPosX(){
+				xPos = Math.floor(Math.random() *450);
+				return xPos
+			}	
+			function ranPosY(){
+				yPos = Math.floor(Math.random() *300);
+				return yPos
+			}
+			
+			
+			function incScore() {
+				score += 1;
+				$("#score").html(score + " "+ "pts");
+			}
+			function startTimer() {
+				$("#timer").show();	
+				updateTimer();
+				}
+			function updateTimer() {
+				if (time_left > -1){
+				clock = setTimeout("updateTimer()", 1000);				
+				$("#timer").html (time_left + " "+ "seconds left");
+				time_left -= 1;
+				}
+				else {
+				stopGame();
+				}
+				
+			}		
+				
+			function stopGame() {
+				if (time_left <= 0) {
+				/* some how my if condition syntex should have {instead of ; and one } in end of actions but 
+				if I change than game does not work as I want it to. */
+				clearTimeout(t);
+				alert ("Game Over !! Your earned "+ score+" pts" );
+				
+				
+				/* above two lines will undbind(stop) all the events from the start button that we created in document ready, 
+				forcing the user to refresh the game to 0 points and  not being able to continue the same game. 
+				This will also prevent all functions from working that are with in start() function because 
+				start() function is activated with clicking start_button. Also clears the gamespace.*/	
+
+				
+				window.location.reload(); 
+			}				
+				
+			}	
+			function randomTimea() {
+						t = setTimeout("addMole()", Math.random()*2000);
+						return t
+						}			
+
+			function addMole() {
+				ranPosX();
+				ranPosY();
+				randomTimea();	
+				
+				$("#gamespace").append('<img src="img/balloon.png" style="top:'+yPos+'px;left:'+xPos+'px;" alt="box_plot_description" />'
+				);			
+				
+				}
+			function del(){ 
+			 $("img:even").remove();		
+				
+				 setTimeout("del()", Math.random()*3000);
+					
+			  }
+			
+
+
+	</script>	
+	
+  </head>
+  <body>
+
+	<div id="content">
+
+		<h1>Pop-A-Balloon</h1>
+		
+		<p>After clicking "start", you will have 30 seconds to click
+		as many balloons as you can. The balloon appear randomly so be ready! </p>
+		
+
+		<div id="controls">
+			<span id="score">0 pts</span>
+			<button type="button" id="start_button">Start!</button>
+			 
+			
+		</div>
+		
+		<div id="timer">30 seconds left</div>
+		
+		<div id="gamespace" >			
+			
+		</div>
+		
+	</div>
+  </body>
+</html>
